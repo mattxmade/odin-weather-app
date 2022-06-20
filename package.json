@@ -1,7 +1,7 @@
 {
   "name": "odin-weather-app",
   "version": "1.0.0",
-  "description": "A weather app powered by openweathermap, built with HTML CSS/Sass and JavaScript.",
+  "description": "A weather app powered by openweathermap, built with HTML CSS/Sass and JavaScript.A weather web app powered by openweathermap, built with HTML CSS/Sass and JavaScript.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
