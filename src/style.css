@@ -1,0 +1,294 @@
+/*======
+  Fonts
+========*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(180deg, rgb(189, 129, 231) 1%, rgb(55, 55, 122) 25%);
+}
+
+p, li, i, h4 {
+  color: white;
+}
+
+p, li {
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+i {
+  font-size: 2rem;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+nav {
+  width: 100%;
+  padding: 3rem 2rem 5rem;
+}
+
+.nav-icon {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+nav .label-search {
+  width: 40%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .label-search input {
+  flex: 1;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 0.2rem solid plum;
+}
+nav .label-search input:focus-visible {
+  outline: none;
+}
+
+nav, .nav_account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*===================
+  Header : Overview
+=====================*/
+.weather-overview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-overview > p {
+  margin-bottom: 1.5rem;
+}
+
+.weather-location {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-condition {
+  width: 100%;
+}
+
+.weather-info {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+}
+
+.weather-info-col-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-info-temp {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.weather-info-temp-grp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.weather-info-temp-grp i {
+  font-size: 1.2rem;
+}
+.weather-info-temp-grp .arrow-1 {
+  top: 0.15rem;
+  position: relative;
+  transform: rotate(-45deg);
+}
+.weather-info-temp-grp .arrow-2 {
+  top: -0.15rem;
+  position: relative;
+  transform: rotate(135deg);
+}
+
+.weather-info-col-2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weather-advice,
+.weather-info-wear,
+.weather-info-take {
+  gap: 1rem;
+  display: flex;
+}
+
+/*======
+  Main
+========*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather-icon {
+  font-size: 3.5rem;
+}
+
+/*=============
+  Dashboards
+==============*/
+.dashbaord-time,
+.dashboard-week {
+  border-radius: 1rem;
+  background-color: rgb(47, 41, 61);
+}
+
+/*===================
+  Dashboard : Today
+====================*/
+.dashbaord-time {
+  width: 100%;
+  display: flex;
+  padding: 2rem 0;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  justify-content: space-evenly;
+}
+
+/*===============
+  Card : Hours
+================*/
+.db-vertical {
+  width: 100%;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.db-vertical p:first-child {
+  margin-bottom: 2rem;
+}
+
+.db-vertical i {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.db-vertical i div {
+  margin-top: 0.7rem;
+}
+
+.divider {
+  left: -100vw;
+  width: 200vw;
+  height: 0.1rem;
+  position: absolute;
+  border-bottom: 0.1rem solid rgb(145, 105, 179);
+}
+
+.dashboard-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/*==================
+  Dashboard : Week
+===================*/
+.dashboard-week {
+  padding: 3rem 1rem 1rem;
+}
+.dashboard-week h4 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dashboard-week ul li {
+  min-height: 8rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid rgb(145, 105, 179);
+}
+.dashboard-week ul li div:not(:first-child) {
+  gap: 2rem;
+  display: flex;
+}
+
+.db-week-date {
+  text-align: center;
+}
+
+.magic-curtain {
+  inset: 0;
+  z-index: 100;
+  width: 0;
+  height: 100vmax;
+  transition: 1.2s;
+  position: absolute;
+  background-color: indigo;
+}
+
+.curtain-call {
+  width: 100vmax;
+  transition: 0.9s;
+}
+
+/*============
+  Scroll bar
+==============*/
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 2rem;
+  border: transparent;
+}/*# sourceMappingURL=style.css.map */
