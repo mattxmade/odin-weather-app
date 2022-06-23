@@ -43,7 +43,7 @@ i {
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ header {
 
 nav {
   width: 100%;
-  padding: 3rem 2rem 5rem;
+  padding: 3rem 2rem 3rem;
 }
 
 .nav-icon {
@@ -94,6 +94,7 @@ nav, .nav_account {
 .weather-overview {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .weather-overview > p {
@@ -105,6 +106,7 @@ nav, .nav_account {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .weather-condition {
@@ -112,15 +114,22 @@ nav, .nav_account {
 }
 
 .weather-info {
+  gap: 2rem;
+  max-height: 124px;
   width: 100%;
   display: flex;
   padding: 1rem 1.5rem;
+  overflow-y: hidden;
   justify-content: space-between;
 }
 
 .weather-info-col-1 {
+  padding: 0.5rem 2rem 2rem;
   display: flex;
   flex-direction: column;
+  border-radius: 1rem;
+  background-color: rgb(92, 79, 153);
+  box-shadow: inset 0 0 1rem -0.1rem black;
 }
 
 .weather-info-temp {
@@ -129,6 +138,7 @@ nav, .nav_account {
 }
 
 .weather-info-temp-grp {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,12 +158,44 @@ nav, .nav_account {
   transform: rotate(135deg);
 }
 
+.weather-type {
+  border-radius: 1rem;
+  background-color: rgb(92, 79, 153);
+  box-shadow: inset 0 0 1rem -0.1rem black;
+}
+
+.weather-info-banner {
+  margin: 0 3rem;
+  position: relative;
+  flex: 1;
+  width: 70rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-info-banner img {
+  width: auto;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+}
+
 .weather-info-col-2 {
   height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(92, 79, 153);
+  box-shadow: inset 0 0 1rem -0.1rem black;
 }
 
 .weather-advice,
@@ -202,14 +244,9 @@ main {
 ================*/
 .db-vertical {
   width: 100%;
-  margin: 0 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.db-vertical p:first-child {
-  margin-bottom: 2rem;
 }
 
 .db-vertical i {
@@ -220,12 +257,26 @@ main {
   margin-top: 0.7rem;
 }
 
+.day-weather-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid rgb(145, 105, 179);
+}
+.day-weather-icon img {
+  max-width: 10rem;
+  width: 100%;
+  height: auto;
+}
+
 .divider {
-  left: -100vw;
-  width: 200vw;
+  bottom: 1rem;
+  width: 200%;
   height: 0.1rem;
   position: absolute;
-  border-bottom: 0.1rem solid rgb(145, 105, 179);
 }
 
 .dashboard-info {
@@ -238,27 +289,69 @@ main {
   Dashboard : Week
 ===================*/
 .dashboard-week {
-  padding: 3rem 1rem 1rem;
+  padding: 3rem 1rem;
 }
 .dashboard-week h4 {
   text-align: center;
   margin-bottom: 2rem;
+  padding: 0.25rem 10vw;
+  border-radius: 5rem;
+  background-color: rgb(145, 105, 179);
 }
 .dashboard-week ul li {
   min-height: 8rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.1rem solid rgb(145, 105, 179);
 }
-.dashboard-week ul li div:not(:first-child) {
-  gap: 2rem;
-  display: flex;
+@media (max-width: 540px) {
+  .dashboard-week ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 8fr 3fr;
+  }
 }
 
 .db-week-date {
-  text-align: center;
+  gap: 1rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 540px) {
+  .db-week-date {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.db-week-condition {
+  gap: 2rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 540px) {
+  .db-week-condition {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.db-week-temperature {
+  gap: 2rem;
+  width: 10rem;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 540px) {
+  .db-week-temperature {
+    width: 100%;
+  }
 }
 
 .magic-curtain {
