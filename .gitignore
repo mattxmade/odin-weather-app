@@ -2,5 +2,5 @@
 .env
 # modules
 node_modules
-# source directory
+#source directory
 src
