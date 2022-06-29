@@ -60,7 +60,6 @@ function weatherDayCard(data) {
   }
 }
 
-// utility function
 function formatDate(str) {
   return new Date(str.slice(0, 10));
 }
